@@ -1,15 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rindo à Toa</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Resetando margens */
+        html, body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f1f1f1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px; 
+        }
+
+      
+        .menu {
+            width: 100%;
+            background-color: #008CBA;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+      
+        .header {
+            background-color: #008CBA;
+            min-height: 250px;
+            text-align: center;
+            color: white;
+        }
+
+        .header img {
+            width: 104%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px; /* Espaço entre os blocos */
+            border-radius: 8px;
+            border: 1px solid #ccc; /* Borda fina para alinhar */
+        }
+
+        h2, h3 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #008CBA;
+            color: white;
+            
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button[type="reset"] {
+            background-color: #f44336;
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            height: 450px;
+        }
+
+      
+        .footer {
+            background-color: rgb(0, 119, 255);
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        
+        #btnTopo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #026b9273;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 18px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #btnTopo:hover {
+            background-color: #026b9273;
+        }
+    </style>
 </head>
 <body>
-    <video controls>
-    <source src="clipe.mp4"/>
-    <source src="clipe02.webm"/>
+    <div class="wrapper">
+       
+        <div class="menu">
+            <a href="#pagina-principal">Página Principal</a>
+            <a href="#sobre-clinica">Sobre a Clínica</a>
+            <a href="#horario-atendimento">Horário de Atendimento</a>
+            <a href="#contato">Contato</a>
+        </div>
 
-</video>
+      
+        <header class="header" id="pagina-principal">
+            <h1>Bem-vindo à Nossa Clínica Rindo à Toa</h1>
+            <img src="imagens/dentist-and-patient-1380x920-1.jpg" alt="Clínica Médica">
+        </header>
+
+       
+        <section class="content" id="sobre-clinica">
+            <h2>Sobre a Clínica</h2>
+            <p>Somos uma clínica especializada em diversas áreas odontológicas, com uma equipe de dentistas experientes e comprometidos com a saúde bucal e bem-estar de nossos pacientes.</p>
+        </section>
+
+       
+        <section class="content" id="horario-atendimento">
+            <h2>Horário de Atendimento</h2>
+            <table>
+                <tr>
+                    <th>Serviços</th>
+                    <th>Segunda a Sexta</th>
+                    <th>Sábados</th>
+                    <th>Feriados</th>
+                </tr>
+                <tr>
+                    <td>Extração</td>
+                    <td>08h - 19h</td>
+                    <td>08h - 14h</td>
+                    <td>08h - 14h</td>
+                </tr>
+                <tr>
+                    <td>Canal</td>
+                    <td>08h - 19h</td>
+                    <td>08h - 14h</td>
+                    <td>08h - 14h</td>
+                </tr>
+                <tr>
+                    <td>Aparelho</td>
+                    <td>08h - 19h</td>
+                    <td>08h - 18h</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Limpeza</td>
+                    <td>08h - 19h</td>
+                    <td>08h - 18h</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </section>
+
+      
+        <section class="content" id="contato">
+            <h2>Contato</h2>
+            <p><strong>Telefone:</strong> (11) 99999-9999 | <strong>WhatsApp:</strong> (11) 98888-8888</p>
+            <p><strong>Endereço:</strong> Av. Dr. Laerte Vieira Gonçalves, 3218 - Segismundo Pereira, Uberlândia - MG, CEP: 38408-273</p>
+
+            <h3>Formulário de Contato</h3>
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </form>
+
+            <h3>Nos Localize:</h3>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.0558746114216!2d-48.226488090044995!3d-18.92892080784216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a44febfb5dadc3%3A0xecf2562c03ac005d!2sAv.%20Dr.%20Laerte%20Vieira%20Gon%C3%A7alves%2C%203218%20-%20Segismundo%20Pereira%2C%20Uberl%C3%A2ndia%20-%20MG%2C%2038408-273!5e0!3m2!1spt-BR!2sbr!4v1738296189608!5m2!1spt-BR!2sbr"></iframe></p>
+        </section>
+        
+       
+        <footer class="footer">
+            <div class="wrapper">
+                <p>&copy; 2025 Clínica Rindo à Toa. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+        
+    </div>
+
+    
+    <button id="btnTopo" onclick="topFunction()">&#8593;</button>
+
+    <script>
+   
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("btnTopo").style.display = "block";
+            } else {
+                document.getElementById("btnTopo").style.display = "none";
+            }
+        };
+
+        
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>
